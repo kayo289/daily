@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dairy.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @dairy.body %>
+</p>
+
+<%= link_to 'Edit', edit_dairy_path(@dairy) %> |
+<%= link_to 'Back', dairies_path %>
