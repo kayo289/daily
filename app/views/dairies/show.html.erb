@@ -1,14 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>ID:</strong>
+  <%= @dairy.id %>
+</p>
+
+<p>
+  <strong>タイトル:</strong>
   <%= @dairy.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>本文:</strong>
   <%= @dairy.body %>
 </p>
 
-<%= link_to 'Edit', edit_dairy_path(@dairy) %> |
-<%= link_to 'Back', dairies_path %>
+<p>
+  <strong>登録日時:</strong>
+  <%= @dairy.created_at %>
+</p>
+
+<p>
+  <strong>更新日時:</strong>
+  <%= @dairy.updated_at %>
+</p>
+
+<%= link_to '編集', edit_dairy_path(@dairy) %> |
+<%= link_to '削除',@dairy,method: :delete,data: { confirm: '本当に削除しますか?'} %>
+<%= link_to '一覧に戻る', dairies_path %>
